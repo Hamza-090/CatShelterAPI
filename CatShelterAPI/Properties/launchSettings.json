@@ -1,0 +1,160 @@
+﻿{
+  // The schema file that tells Visual Studio and VS Code
+  // what properties are allowed inside this file.
+  // It also enables IntelliSense (auto-complete and validation).
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+
+  // "profiles" contains one or more launch configurations.
+  // Each profile tells ASP.NET Core HOW to run your application.
+  // When you press F5 or click Run, Visual Studio uses one of these profiles.
+  "profiles": {
+
+    // -----------------------------
+    // HTTP PROFILE
+    // -----------------------------
+    // This profile starts the application using only HTTP.
+    "http": {
+
+      // commandName tells Visual Studio how to start the application.
+      //
+      // "Project" means:
+      // - Build the current project.
+      // - Run the project's main entry point (Program.cs).
+      //
+      // Other possible values are:
+      // "IISExpress" -> Run using IIS Express.
+      // "Executable" -> Run another executable.
+      "commandName": "Project",
+
+      // When true, the .NET CLI prints useful startup messages
+      // in the console.
+      //
+      // Example:
+      // Now listening on: http://localhost:5276
+      // Application started.
+      "dotnetRunMessages": true,
+
+      // If true, the browser automatically opens
+      // after the application starts.
+      //
+      // If false, the application starts
+      // but no browser is opened.
+      "launchBrowser": true,
+
+      // The page that should open automatically.
+      //
+      // Since the value is "swagger",
+      // the browser opens:
+      //
+      // http://localhost:5276/swagger
+      //
+      // instead of just:
+      //
+      // http://localhost:5276
+      "launchUrl": "swagger",
+
+      // The URL(s) where the application listens.
+      //
+      // "applicationUrl" means:
+      // "Start the web server on this address."
+      //
+      // localhost
+      // ---------
+      // Refers to YOUR OWN COMPUTER.
+      // It never points to another computer.
+      //
+      // 5276
+      // ----
+      // This is the PORT number.
+      // A port identifies a specific application
+      // running on your computer.
+      //
+      // Example:
+      // Chrome may use one port,
+      // SQL Server another,
+      // Your ASP.NET app another.
+      "applicationUrl": "http://localhost:5276",
+
+      // Environment variables that will exist
+      // while the application is running.
+      "environmentVariables": {
+
+        // ASPNETCORE_ENVIRONMENT tells ASP.NET Core
+        // which environment it is running in.
+        //
+        // Common values:
+        //
+        // Development
+        // Production
+        // Staging
+        //
+        // Development enables:
+        // ✔ Detailed error pages
+        // ✔ Swagger (usually)
+        // ✔ Debugging features
+        // ✔ Developer Exception Page
+        //
+        // Production hides detailed errors
+        // for security.
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+
+    // -----------------------------
+    // HTTPS PROFILE
+    // -----------------------------
+    // This profile runs using HTTPS.
+    "https": {
+
+      // Again, run the current project.
+      "commandName": "Project",
+
+      // Show startup messages.
+      "dotnetRunMessages": true,
+
+      // Automatically open the browser.
+      "launchBrowser": true,
+
+      // Open the Swagger page.
+      "launchUrl": "swagger",
+
+      // Notice there are TWO URLs separated by a semicolon.
+      //
+      // https://localhost:7119
+      // http://localhost:5276
+      //
+      // The application listens on BOTH addresses.
+      //
+      // HTTPS
+      // -----
+      // Secure communication using SSL/TLS.
+      // Data is encrypted.
+      //
+      // HTTP
+      // ----
+      // Normal communication.
+      // Data is NOT encrypted.
+      //
+      // Why both?
+      // ----------
+      // Many ASP.NET Core projects allow both
+      // HTTP and HTTPS during development.
+      //
+      // You can access either:
+      //
+      // https://localhost:7119
+      //
+      // or
+      //
+      // http://localhost:5276
+      "applicationUrl": "https://localhost:7119;http://localhost:5276",
+
+      // Environment variables.
+      "environmentVariables": {
+
+        // Run in Development mode.
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

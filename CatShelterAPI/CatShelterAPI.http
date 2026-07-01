@@ -1,0 +1,6 @@
+@CatShelterAPI_HostAddress = http://localhost:5276
+
+GET {{CatShelterAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
